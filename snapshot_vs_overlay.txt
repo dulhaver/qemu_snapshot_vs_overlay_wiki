@@ -1,0 +1,7 @@
+snapshot: copy of the current state of a qcow2 image file
+snapshot: 
+overlay (copy-on-write) image: works on top of an existing base qcow2 image file
+overlay (copy-on-write) image: is very small when being created
+overlay (copy-on-write) image: depends on it's base image. The base image is being read by the c-o-w while it is running
+overlay (copy-on-write) image: if the base image is being changed the c-o-w can not work anymore
+
