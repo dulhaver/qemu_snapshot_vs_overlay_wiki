@@ -1,6 +1,7 @@
 snapshot: copy of the current state of a qcow2 image file
-snapshot: qemu-img snapshot -c [snapshot_name] [datei_name]    creates a snapshot within the base image. No addtitioanl file is being created
-snapshot: listing existing snapshots of a base mage    qemu-img snapshot -l [datei_name]
+snapshot: qemu-img snapshot -c [snapshot_name] [base_name]    creates a snapshot within the base image file. No addtitioanl file is being created
+a snapshot can be restored or converted to an independent image file
+snapshot:    qemu-img snapshot -l [base_name]    lists existing snapshots of a base image
 
 
 overlay (copy-on-write) image: works on top of an existing base qcow2 image file
