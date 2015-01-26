@@ -1,10 +1,10 @@
 snapshot: copy of the current state of a qcow2 image file
-snapshot: crating a snapshot    qemu-img snapshot -c [snapshot_name] [datei_name]
+snapshot: qemu-img snapshot -c [snapshot_name] [datei_name]    creates a snapshot within the base image. No addtitioanl file is being created
 snapshot: listing existing snapshots of a base mage    qemu-img snapshot -l [datei_name]
 
+
 overlay (copy-on-write) image: works on top of an existing base qcow2 image file
-overlay (copy-on-write) image: is very small when being created
-overlay (copy-on-write) image: depends on it's base image. The base image is being read by the c-o-w while it is running
-overlay (copy-on-write) image: if the base image is being changed the c-o-w can not work anymore
-create an overlay (cow) image: qemu-image create -f qcow2 -b [base_image_name.qcow2] [cow_image_name.qcow2]
+overlay (cow) image: is a new file that lies 'on top' of a base image. This cow image file depends on it's base image. The base image is being read by the c-o-w while it is running
+overlay (cow) image: if the base image is being changed or not available the cow can not work anymore
+qemu-image create -f qcow2 -b [base_image_name.qcow2] [cow_image_name.qcow2]   creates and cow image on top of base_image_name.qcow2
 
