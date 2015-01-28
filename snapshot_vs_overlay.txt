@@ -9,3 +9,4 @@ overlay (cow) image: is a new file that lies 'on top' of a base image. This cow 
 overlay (cow) image: if the base image is being changed or not available the cow can not work anymore
 qemu-image create -f qcow2 -b [base_image_name.qcow2] [cow_image_name.qcow2]   creates and cow image on top of base_image_name.qcow2
 
+http://kashyapc.com/2011/10/04/snapshotting-with-libvirt-for-qcow2-images/
